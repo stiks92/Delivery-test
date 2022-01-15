@@ -13,6 +13,11 @@
 		747E597E2792B82D0039D825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 747E597C2792B82D0039D825 /* Main.storyboard */; };
 		747E59802792B8300039D825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747E597F2792B8300039D825 /* Assets.xcassets */; };
 		747E59832792B8300039D825 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 747E59812792B8300039D825 /* LaunchScreen.storyboard */; };
+		747E598B2792B9670039D825 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 747E598A2792B9670039D825 /* GoogleService-Info.plist */; };
+		747E598E2792C0B90039D825 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 747E598D2792C0B90039D825 /* FirebaseAnalytics */; };
+		747E59902792C0B90039D825 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 747E598F2792C0B90039D825 /* FirebaseDatabase */; };
+		747E59922792C0B90039D825 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 747E59912792C0B90039D825 /* FirebaseFirestore */; };
+		747E59942792C0B90039D825 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 747E59932792C0B90039D825 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,7 @@
 		747E597F2792B8300039D825 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		747E59822792B8300039D825 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		747E59842792B8300039D825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		747E598A2792B9670039D825 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				747E59902792C0B90039D825 /* FirebaseDatabase in Frameworks */,
+				747E59942792C0B90039D825 /* FirebaseStorage in Frameworks */,
+				747E598E2792C0B90039D825 /* FirebaseAnalytics in Frameworks */,
+				747E59922792C0B90039D825 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +69,7 @@
 				747E59762792B82D0039D825 /* AppDelegate.swift */,
 				747E59782792B82D0039D825 /* SceneDelegate.swift */,
 				747E597A2792B82D0039D825 /* ViewController.swift */,
+				747E598A2792B9670039D825 /* GoogleService-Info.plist */,
 				747E597C2792B82D0039D825 /* Main.storyboard */,
 				747E597F2792B8300039D825 /* Assets.xcassets */,
 				747E59812792B8300039D825 /* LaunchScreen.storyboard */,
@@ -83,6 +94,12 @@
 			dependencies = (
 			);
 			name = "Delivery-test";
+			packageProductDependencies = (
+				747E598D2792C0B90039D825 /* FirebaseAnalytics */,
+				747E598F2792C0B90039D825 /* FirebaseDatabase */,
+				747E59912792C0B90039D825 /* FirebaseFirestore */,
+				747E59932792C0B90039D825 /* FirebaseStorage */,
+			);
 			productName = "Delivery-test";
 			productReference = 747E59732792B82D0039D825 /* Delivery-test.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 747E596A2792B82D0039D825;
+			packageReferences = (
+				747E598C2792C0B90039D825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 747E59742792B82D0039D825 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				747E59832792B8300039D825 /* LaunchScreen.storyboard in Resources */,
+				747E598B2792B9670039D825 /* GoogleService-Info.plist in Resources */,
 				747E59802792B8300039D825 /* Assets.xcassets in Resources */,
 				747E597E2792B82D0039D825 /* Main.storyboard in Resources */,
 			);
@@ -360,6 +381,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		747E598C2792C0B90039D825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		747E598D2792C0B90039D825 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 747E598C2792C0B90039D825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		747E598F2792C0B90039D825 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 747E598C2792C0B90039D825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		747E59912792C0B90039D825 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 747E598C2792C0B90039D825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		747E59932792C0B90039D825 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 747E598C2792C0B90039D825 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 747E596B2792B82D0039D825 /* Project object */;
 }
